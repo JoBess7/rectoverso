@@ -43,19 +43,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="approach-feature" id="approche">
-          <div className="section-index" data-reveal>01 <span>—</span> Notre approche</div>
-          <div className="approach-copy" data-reveal>
-            <h2>Chaque enfant avance<br /><span>à sa façon.</span></h2>
-            <div className="approach-detail">
-              <p className="body-large">Nous soutenons les jeunes dans les défis du quotidien, avec une approche bienveillante et des interventions adaptées à leur réalité.</p>
-              <Link className="text-link" href="#equipe">Une équipe à votre écoute <span aria-hidden="true">→</span></Link>
-            </div>
-          </div>
-        </section>
-
         <section className="focus-band section-wrap">
-          <div className="section-index" data-reveal>02 <span>—</span> Nos champs d’action</div>
+          <div className="section-index" data-reveal>01 <span>—</span> Nos champs d’action</div>
           <h2 data-reveal>Des petits pas qui<br />font <span>une différence.</span></h2>
           <div className="focus-grid">
             {focusAreas.map((area) => (
@@ -68,17 +57,21 @@ export default function HomePage() {
         </section>
 
         <section className="services-teaser section-wrap" id="services">
-          <div className="section-index" data-reveal>03 <span>—</span> Nos services</div>
+          <div className="section-index" data-reveal>02 <span>—</span> Nos services</div>
           <div className="teaser-row" data-reveal><h2>Un accompagnement<br /><span>qui lui ressemble.</span></h2><p>Des professionnels dévoués, des séances adaptées et plusieurs façons de vous accompagner — en clinique, à domicile, à l’école ou en garderie.</p></div>
           <div className="service-list">{services.map((service, index) => <Link href="#contact" key={service.title} data-reveal><span className="service-number">{String(index + 1).padStart(2, "0")}</span><strong>{service.title}</strong><Image className="service-illustration" src={service.illustration} alt="" aria-hidden="true" width={68} height={68} unoptimized /><span className="service-arrow" aria-hidden="true">↗</span></Link>)}</div>
         </section>
 
-        <section className="team-band" id="equipe">
-          <div className="team-band-copy" data-reveal>
-            <div className="team-band-heading"><p className="eyebrow">Une équipe à l’écoute</p><h2>À ses côtés,<br /><span>à chaque étape.</span></h2></div>
-            <div className="team-band-detail"><p>Des professionnelles engagées auprès des enfants et de leur famille.</p></div>
+        <section className="team-band" id="approche">
+          <div className="team-band-copy">
+            <div className="section-index" data-reveal>03 <span>—</span> Notre approche</div>
+            <div className="team-band-heading" data-reveal><h2>Chaque enfant avance<br /><span>à sa façon.</span></h2></div>
+            <div className="team-band-detail" data-reveal>
+              <p>Nous soutenons les jeunes dans les défis du quotidien, avec une approche bienveillante et des interventions adaptées à leur réalité.</p>
+              <Link className="text-link" href="#contact">Une équipe à votre écoute <span aria-hidden="true">→</span></Link>
+            </div>
           </div>
-          <Image className="team-band-image" data-reveal src="/assets/photos/sensory-play.webp" alt="Une enfant explore du matériel sensoriel accompagnée par une intervenante" width={1200} height={800} sizes="(max-width: 700px) 100vw, 50vw" />
+          <Image className="team-band-image" id="equipe" data-reveal src="/assets/photos/sensory-play.webp" alt="Une enfant explore du matériel sensoriel accompagnée par une intervenante" width={1200} height={800} sizes="(max-width: 700px) 100vw, 50vw" />
         </section>
 
         <section className="closing" id="contact">
