@@ -87,7 +87,7 @@ h1, h2, h3, p { margin-top: 0; }
 .section-index span { padding: 0 .5rem; color: var(--sarcelle-light); }
 .intro-content { display: grid; grid-template-columns: 1.1fr .9fr; gap: 8vw; margin: 3rem 0 0 17%; }
 .approach-feature { padding: clamp(4.5rem, 9vw, 8rem) var(--space); background: var(--paper); }
-.approach-copy { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 8vw; margin: 3rem 0 0 17%; }
+.approach-copy { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 8vw; margin: 3rem 0 0; }
 .approach-copy h2 { margin: 0; }
 .approach-copy .body-large { max-width: 480px; margin-bottom: 1.5rem; font-size: clamp(1rem, 1.35vw, 1.15rem); }
 .team-band { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; background: var(--lavender); }
