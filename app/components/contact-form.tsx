@@ -35,6 +35,7 @@ export function ContactForm() {
             <option>Ergothérapie</option>
             <option>Orthophonie</option>
             <option>Éducation spécialisée</option>
+            <option>Psychoéducation</option>
             <option>Offres de groupes</option>
           </select>
         </label>

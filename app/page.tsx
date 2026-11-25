@@ -4,8 +4,8 @@ import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 
 const focusAreas = [
-  { number: "01", title: "Développement", text: "Motricité, coordination et autonomie dans les activités de tous les jours." },
-  { number: "02", title: "Langage & communication", text: "Expression, parole et compréhension orale ou écrite." },
+  { number: "01", title: "Développement", text: "Croissance motrice et coordination des mouvements quotidiens. Renforcer l’adaptation, l’estime de soi, la régulation émotionnelle et les habiletés sociales." },
+  { number: "02", title: "Langage & communication", text: "Expression, parole, précurseurs de la communication et compréhension orale ou écrite. Trouble orofacial myofonctionnel (TOM)." },
   { number: "03", title: "Apprentissage", text: "Écriture, compétences scolaires et confiance pour apprendre." },
   { number: "04", title: "Sensoriel & bien-être", text: "Un accompagnement adapté aux besoins et au quotidien de chaque jeune." },
 ];
@@ -14,6 +14,7 @@ const services = [
   { id: "ergotherapie", title: "Ergothérapie", illustration: "/assets/illustrations/Abeille.svg" },
   { id: "orthophonie", title: "Orthophonie", illustration: "/assets/illustrations/Libellule.svg" },
   { id: "education-specialisee", title: "Éducation spécialisée", illustration: "/assets/illustrations/Coccinelle.svg" },
+  { id: "psychoeducation", title: "Psychoéducation", illustration: "/assets/illustrations/Escargot.svg" },
   { id: "groupes", title: "Groupes et activités", illustration: "/assets/illustrations/Chenille.svg" },
 ];
 

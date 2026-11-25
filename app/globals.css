@@ -164,7 +164,7 @@ h1, h2, h3, p { margin-top: 0; }
 .page-section-heading h2, .groups-intro h2, .delivery-copy h2, .team-directory-heading h2, .contact-overview h2, .locations-heading h2, .contact-form h2, .contact-extra h2 { margin: 0; font: 600 clamp(2.6rem, 5.5vw, 4.5rem) / 1.05 var(--sans); letter-spacing: -.07em; }
 .page-section-heading h2 span, .groups-intro h2 span, .delivery-copy h2 span, .team-directory-heading h2 span, .contact-overview h2 span, .locations-heading h2 span, .contact-form h2 span, .contact-extra h2 span { color: var(--sarcelle); font-weight: 400; }
 .professional-section { background: var(--paper); }
-.professional-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.professional-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .professional-card { min-height: 380px; padding: 1.7rem 1.7rem 2rem; background: var(--white); }
 .professional-card + .professional-card { border-left: 1px solid var(--line); }
 .professional-card-top { display: flex; align-items: center; justify-content: space-between; min-height: 64px; color: var(--sarcelle); font-size: .76rem; letter-spacing: .12em; }
@@ -201,6 +201,15 @@ h1, h2, h3, p { margin-top: 0; }
 .team-card-copy h3 { margin: 0 0 .35rem; font-size: clamp(1.3rem, 2vw, 1.65rem); font-weight: 500; letter-spacing: -.045em; }
 .team-card-role { min-height: 2.8em; margin: 0 0 .9rem; color: var(--sarcelle); font-size: .84rem; font-weight: 600; line-height: 1.5; }
 .team-card-bio { margin: 0 0 .9rem; color: var(--muted); font-size: .89rem; line-height: 1.7; }
+.team-card-details { margin: 0 0 .9rem; border-top: 1px solid var(--line); }
+.team-card-details summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .7rem 0; color: var(--sarcelle); cursor: pointer; font-size: .78rem; font-weight: 600; list-style: none; }
+.team-card-details summary::-webkit-details-marker { display: none; }
+.team-card-details summary::after { content: "+"; flex: 0 0 auto; font-size: 1.15rem; font-weight: 400; transition: transform .2s ease; }
+.team-card-details[open] summary::after { content: "−"; }
+.team-card-details summary:focus-visible { outline: 2px solid var(--sarcelle); outline-offset: 3px; }
+.team-card-details-open, .team-card-details[open] .team-card-details-closed { display: none; }
+.team-card-details[open] .team-card-details-open { display: inline; }
+.team-card-details p { margin: 0 0 .9rem; color: var(--muted); font-size: .84rem; line-height: 1.7; }
 .team-card-email { display: inline-flex; align-items: center; gap: .5rem; color: var(--ink); font-size: .78rem; font-weight: 600; }
 .team-card-email:hover, .team-card-email:focus-visible { color: var(--sarcelle); }
 .team-page-cta { padding: clamp(4rem, 8vw, 6rem) var(--space); background: var(--lavender); }
@@ -318,7 +327,8 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (max-width: 850px) {
   .professional-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .professional-card:last-child { grid-column: 1 / -1; border-top: 1px solid var(--line); border-left: 0; }
+  .professional-card:nth-child(odd) { border-left: 0; }
+  .professional-card:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .professional-card { min-height: 340px; }
   .groups-section { grid-template-columns: 1fr; }
   .group-list { width: 100%; }

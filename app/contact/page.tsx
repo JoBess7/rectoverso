@@ -13,9 +13,9 @@ const locations = [
   {
     number: "01",
     name: "Clinique RectoVerso",
-    address: "1305, rue du Blizzard, local 106",
+    address: "1170, boulevard Lebourgneuf, local 208",
     city: "Québec (Québec)",
-    map: "https://www.google.com/maps/search/?api=1&query=1305%20rue%20du%20Blizzard%20local%20106%20Qu%C3%A9bec%20QC",
+    map: "https://www.google.com/maps/search/?api=1&query=1170%20boulevard%20Lebourgneuf%20local%20208%20Qu%C3%A9bec%20QC",
   },
   {
     number: "02",

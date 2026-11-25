@@ -22,7 +22,7 @@ const professionalServices = [
     id: "orthophonie",
     number: "02",
     title: "Orthophonie",
-    summary: "Soutenir les précurseurs à la communication, le langage oral ainsi que la compréhension en lecture et en écriture.",
+    summary: "Soutenir les précurseurs de la communication, le langage oral ainsi que la compréhension en lecture et en écriture.",
     examples: "Retard de langage ou de communication, sons et parole, développement du langage, dyspraxie, dyslexie et dysorthographie.",
     illustration: "/assets/illustrations/Libellule.svg",
   },
@@ -33,6 +33,14 @@ const professionalServices = [
     summary: "Accompagner le développement global et langagier, le comportement et la vie familiale.",
     examples: "Soutien individualisé, application de plans d’intervention, observation, évaluation des besoins et accompagnement dans les milieux de vie.",
     illustration: "/assets/illustrations/Coccinelle.svg",
+  },
+  {
+    id: "psychoeducation",
+    number: "04",
+    title: "Psychoéducation",
+    summary: "Accompagner l’enfant en évaluant son fonctionnement adaptatif, en développant ses capacités d’adaptation afin de soutenir son bien-être et de trouver un équilibre entre ses besoins et les exigences de son environnement.",
+    examples: "Soutien au développement des capacités d’adaptation et au bien-être de l’enfant.",
+    illustration: "/assets/illustrations/Escargot.svg",
   },
 ];
 
