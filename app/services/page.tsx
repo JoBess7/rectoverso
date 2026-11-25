@@ -6,7 +6,7 @@ import { SiteFooter } from "../components/site-footer";
 
 export const metadata: Metadata = {
   title: "Nos services | Clinique Recto Verso",
-  description: "Ergothérapie, orthophonie et éducation spécialisée pour les jeunes de 0 à 18 ans, dans la région de Québec.",
+  description: "Ergothérapie, orthophonie, éducation spécialisée et psychoéducation pour les jeunes de 0 à 18 ans, dans la région de Québec.",
 };
 
 const professionalServices = [
@@ -14,41 +14,41 @@ const professionalServices = [
     id: "ergotherapie",
     number: "01",
     title: "Ergothérapie",
-    summary: "Développer les habiletés motrices, sensorielles et l’autonomie dans les activités du quotidien.",
-    examples: "Préalable scolaire, écriture, organisation, retard de développement, coordination, alimentation et besoins liés au TSA.",
+    summary: "Développement moteur, sensoriel et de l’autonomie dans les activités quotidiennes.",
+    examples: "Préalable scolaire, écriture, organisation, retard de développement, trouble de la coordination (TDC), trouble du spectre de l’autisme (TSA), alimentation, etc.",
     illustration: "/assets/illustrations/Abeille.svg",
   },
   {
     id: "orthophonie",
     number: "02",
     title: "Orthophonie",
-    summary: "Soutenir les précurseurs de la communication, le langage oral ainsi que la compréhension en lecture et en écriture.",
-    examples: "Retard de langage ou de communication, sons et parole, développement du langage, dyspraxie, dyslexie et dysorthographie.",
+    summary: "Précurseurs de la communication, développement du langage oral et compréhension en lecture et en écriture.",
+    examples: "Retard de langage oral et de la communication, trouble du développement du langage, trouble des sons et de la parole, dyspraxie, dyslexie et dysorthographie, etc.",
     illustration: "/assets/illustrations/Libellule.svg",
   },
   {
     id: "education-specialisee",
     number: "03",
     title: "Éducation spécialisée",
-    summary: "Accompagner le développement global et langagier, le comportement et la vie familiale.",
-    examples: "Soutien individualisé, application de plans d’intervention, observation, évaluation des besoins et accompagnement dans les milieux de vie.",
+    summary: "Développement global et langagier, comportement et coaching familial.",
+    examples: "Accompagnement individualisé et application de plans d’intervention, observations, évaluation des besoins, formations et soutien dans les différents milieux de vie, etc.",
     illustration: "/assets/illustrations/Coccinelle.svg",
   },
   {
     id: "psychoeducation",
     number: "04",
     title: "Psychoéducation",
-    summary: "Accompagner l’enfant en évaluant son fonctionnement adaptatif, en développant ses capacités d’adaptation afin de soutenir son bien-être et de trouver un équilibre entre ses besoins et les exigences de son environnement.",
-    examples: "Soutien au développement des capacités d’adaptation et au bien-être de l’enfant.",
+    summary: "Évaluer le fonctionnement adaptatif et développer les capacités d’adaptation de l’enfant pour soutenir son bien-être.",
+    examples: "Capacités d’adaptation et équilibre entre les besoins de l’enfant et les exigences de son environnement.",
     illustration: "/assets/illustrations/Escargot.svg",
   },
 ];
 
 const groupPrograms = [
-  { title: "Camp d’été spécialisé", text: "Un camp de stimulation intensive en ergothérapie pour soutenir la progression des enfants pendant l’été." },
-  { title: "Apprentissage du vélo", text: "Des séances de groupe de 90 minutes où les enfants apprennent à rouler à deux roues avec le soutien d’un parent et de professionnels." },
-  { title: "Groupe d’écriture RectoCalli", text: "Un programme d’ergothérapie de huit semaines pour développer les compétences graphiques des enfants de 1re et 2e année." },
-  { title: "Formations sur mesure", text: "Des formations en ergothérapie pour les équipes scolaires et les centres de la petite enfance." },
+  { title: "Camp d’été spécialisé", text: "Chaque été, nous offrons un camp spécialisé de stimulation intensive en ergothérapie. Ce service de réadaptation permet aux enfants nécessitant des interventions de poursuivre leur progression durant la période estivale." },
+  { title: "Groupe d’apprentissage du vélo à deux roues", text: "Chaque été, nous offrons des groupes d’apprentissage du vélo pour les enfants. D’une durée de 90 minutes, ces séances permettent aux jeunes, accompagnés d’un parent, d’apprendre aux côtés d’autres enfants avec le soutien et les conseils de nos professionnels." },
+  { title: "Groupe d’écriture RectoCalli", text: "Intervention en ergothérapie, sous forme de groupe, offerte sur 8 semaines, permettant aux enfants de 1re et 2e année qui présentent des difficultés dans l’apprentissage de l’écriture de développer leurs compétences graphiques. Un plan d’intervention en ergo est nécessaire ou une première rencontre d’évaluation sera demandée afin de s’assurer que cette offre de service réponde à ses besoins." },
+  { title: "Formation sur mesure en ergothérapie", titleContinuation: "pour les équipes scolaires et les centres de la petite enfance", text: "Des formations en ergothérapie conçues sur mesure selon les besoins et la réalité des équipes scolaires et des centres de la petite enfance, pour soutenir leurs interventions et l’accompagnement des enfants dans leurs milieux de vie." },
 ];
 
 export default function ServicesPage() {
@@ -73,7 +73,7 @@ export default function ServicesPage() {
                 <div className="professional-card-top"><span>{service.number}</span><Image src={service.illustration} alt="" aria-hidden="true" width={58} height={58} unoptimized /></div>
                 <h3>{service.title}</h3>
                 <p className="professional-summary">{service.summary}</p>
-                <p className="professional-examples"><strong>Exemples de besoins</strong><br />{service.examples}</p>
+                {service.examples && <p className="professional-examples"><strong>Exemples de besoins</strong><br />{service.examples}</p>}
               </article>
             ))}
           </div>
@@ -90,7 +90,7 @@ export default function ServicesPage() {
             {groupPrograms.map((program, index) => (
               <article className="group-row" key={program.title}>
                 <span className="group-number">{String(index + 1).padStart(2, "0")}</span>
-                <div><h3>{program.title}</h3><p>{program.text}</p></div>
+                <div><h3>{program.title}{"titleContinuation" in program && <><br />{program.titleContinuation}</>}</h3>{program.text && <p>{program.text}</p>}</div>
               </article>
             ))}
           </div>

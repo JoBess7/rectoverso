@@ -4,10 +4,30 @@ import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 
 const focusAreas = [
-  { number: "01", title: "Développement", text: "Croissance motrice et coordination des mouvements quotidiens. Renforcer l’adaptation, l’estime de soi, la régulation émotionnelle et les habiletés sociales." },
-  { number: "02", title: "Langage & communication", text: "Expression, parole, précurseurs de la communication et compréhension orale ou écrite. Trouble orofacial myofonctionnel (TOM)." },
-  { number: "03", title: "Apprentissage", text: "Écriture, compétences scolaires et confiance pour apprendre." },
-  { number: "04", title: "Sensoriel & bien-être", text: "Un accompagnement adapté aux besoins et au quotidien de chaque jeune." },
+  {
+    number: "01",
+    title: "Développement",
+    text: "Croissance motrice et coordination des mouvements quotidiens. Soutenir aussi les capacités d’adaptation au quotidien, l’estime de soi, la régulation émotionnelle et les habiletés sociales.",
+    examples: ["Retard de développement", "Difficultés motrices", "Troubles de la coordination"],
+  },
+  {
+    number: "02",
+    title: "Langage & Communication",
+    text: "Expression, parole, précurseurs de la communication, compréhension orale ou écrite et trouble orofacial myofonctionnel (TOM).",
+    examples: ["Retard de langage", "Troubles de la parole", "Dyspraxie orale", "Difficultés d’expression", "Difficultés de compréhension"],
+  },
+  {
+    number: "03",
+    title: "Apprentissage",
+    text: "Acquisition des bases scolaires et compétences écrites.",
+    examples: ["Difficultés à l’écriture", "Troubles d’apprentissage"],
+  },
+  {
+    number: "04",
+    title: "Sensoriel & Diagnostics",
+    text: "Perceptions sensorielles et impacts de divers diagnostics.",
+    examples: ["Troubles sensoriels", "Difficultés liées à un diagnostic"],
+  },
 ];
 
 const services = [
@@ -50,7 +70,11 @@ export default function HomePage() {
           <div className="focus-grid">
             {focusAreas.map((area) => (
               <article key={area.number} data-reveal>
-                <span className="card-number">{area.number}</span><h3>{area.title}</h3><p>{area.text}</p><span className="card-symbol" aria-hidden="true">↗</span>
+                <span className="card-number">{area.number}</span><h3>{area.title}</h3><p className="focus-description">{area.text}</p>
+                <div className="focus-example-block">
+                  <p className="focus-examples-title">Exemples</p>
+                  <p className="focus-examples">{area.examples.join(" · ")}</p>
+                </div>
               </article>
             ))}
           </div>
