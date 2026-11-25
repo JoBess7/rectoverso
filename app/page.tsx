@@ -11,10 +11,10 @@ const focusAreas = [
 ];
 
 const services = [
-  { title: "Ergothérapie", illustration: "/assets/illustrations/Abeille.svg" },
-  { title: "Orthophonie", illustration: "/assets/illustrations/Libellule.svg" },
-  { title: "Éducation spécialisée", illustration: "/assets/illustrations/Coccinelle.svg" },
-  { title: "Groupes et activités", illustration: "/assets/illustrations/Chenille.svg" },
+  { id: "ergotherapie", title: "Ergothérapie", illustration: "/assets/illustrations/Abeille.svg" },
+  { id: "orthophonie", title: "Orthophonie", illustration: "/assets/illustrations/Libellule.svg" },
+  { id: "education-specialisee", title: "Éducation spécialisée", illustration: "/assets/illustrations/Coccinelle.svg" },
+  { id: "groupes", title: "Groupes et activités", illustration: "/assets/illustrations/Chenille.svg" },
 ];
 
 export default function HomePage() {
@@ -26,8 +26,8 @@ export default function HomePage() {
         <section className="hero" aria-labelledby="hero-title">
           <figure className="hero-image">
             <Image
-              src="/assets/photos/hero-woman-session.jpg"
-              alt="Une intervenante échange avec deux jeunes autour d’une activité à une table"
+              src="/assets/photos/homepage-hero-clear.jpg"
+              alt="Une intervenante et des enfants participent à une activité ensemble"
               fill
               priority
               sizes="100vw"
@@ -59,7 +59,7 @@ export default function HomePage() {
         <section className="services-teaser section-wrap" id="services">
           <div className="section-index" data-reveal>02 <span>—</span> Nos services</div>
           <div className="teaser-row" data-reveal><h2>Un accompagnement<br /><span>qui lui ressemble.</span></h2><p>Des professionnels dévoués, des séances adaptées et plusieurs façons de vous accompagner — en clinique, à domicile, à l’école ou en garderie.</p></div>
-          <div className="service-list">{services.map((service, index) => <Link href="#contact" key={service.title} data-reveal><span className="service-number">{String(index + 1).padStart(2, "0")}</span><strong>{service.title}</strong><Image className="service-illustration" src={service.illustration} alt="" aria-hidden="true" width={68} height={68} unoptimized /><span className="service-arrow" aria-hidden="true">↗</span></Link>)}</div>
+          <div className="service-list">{services.map((service, index) => <Link href={`/services#${service.id}`} key={service.title} data-reveal><span className="service-number">{String(index + 1).padStart(2, "0")}</span><strong>{service.title}</strong><Image className="service-illustration" src={service.illustration} alt="" aria-hidden="true" width={68} height={68} unoptimized /><span className="service-arrow" aria-hidden="true">↗</span></Link>)}</div>
         </section>
 
         <section className="team-band" id="approche">

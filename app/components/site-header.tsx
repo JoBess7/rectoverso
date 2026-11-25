@@ -5,9 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#equipe", label: "Équipe" },
-  { href: "#contact", label: "Contact" },
+  { href: "/services", label: "Services" },
+  { href: "/equipe", label: "Équipe" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
